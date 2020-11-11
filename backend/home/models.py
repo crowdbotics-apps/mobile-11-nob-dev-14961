@@ -14,6 +14,10 @@ class CustomText(models.Model):
         null=True,
         blank=True,
     )
+    kjjkjjk = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
 
     def __str__(self):
         return self.title
