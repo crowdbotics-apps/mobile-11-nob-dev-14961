@@ -10,7 +10,7 @@ class CustomText(models.Model):
     title = models.CharField(
         max_length=150,
     )
-    scs = models.BigIntegerField(
+    schggjgjgkjhhjk = models.BigIntegerField(
         null=True,
         blank=True,
     )
@@ -37,3 +37,8 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+
+class SFDF(models.Model):
+    "Generated Model"
+    jjh = models.BigIntegerField()
