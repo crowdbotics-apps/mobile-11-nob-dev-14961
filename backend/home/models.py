@@ -42,3 +42,8 @@ class HomePage(models.Model):
 class SFDF(models.Model):
     "Generated Model"
     jjh = models.BigIntegerField()
+
+
+class QWE(models.Model):
+    "Generated Model"
+    hjgjg = models.BigIntegerField()

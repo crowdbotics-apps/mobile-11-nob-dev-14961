@@ -6,20 +6,28 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0003_customtext_scs'),
+        ("home", "0003_customtext_scs"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='SFDF',
+            name="SFDF",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('jjh', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("jjh", models.BigIntegerField()),
             ],
         ),
         migrations.RenameField(
-            model_name='customtext',
-            old_name='scs',
-            new_name='schggjgjgkjhhjk',
+            model_name="customtext",
+            old_name="scs",
+            new_name="schggjgjgkjhhjk",
         ),
     ]

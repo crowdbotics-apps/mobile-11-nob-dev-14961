@@ -1,6 +1,11 @@
 from rest_framework import viewsets
 from rest_framework import authentication
-from .serializers import CustomTextSerializer, HomePageSerializer, SFDFSerializer
+from .serializers import (
+    CustomTextSerializer,
+    HomePageSerializer,
+    QWESerializer,
+    SFDFSerializer,
+)
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.permissions import IsAdminUser
@@ -14,7 +19,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, HomePage, SFDF
+from home.models import CustomText, HomePage, QWE, SFDF
 
 
 class SignupViewSet(ModelViewSet):
@@ -61,3 +66,12 @@ class SFDFViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = SFDF.objects.all()
+
+
+class QWEViewSet(viewsets.ModelViewSet):
+    serializer_class = QWESerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = QWE.objects.all()
